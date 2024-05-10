@@ -1,41 +1,58 @@
-# CE429-MP
-Solutions to Mr. Ahmadi-Nik's CE429: Mobile Programming (Sharif University of Technology - Spring 2024)
+# Assignment04 - Question02
 
-## Overview
+![Animation.gif](Animation.gif)
 
-This repository contains solutions to the assignments for the CE429: Mobile Programming course at the Sharif University of Technology, Spring 2024, taught by Mr. Ahmadi-Nik.
+### Methods
 
-## Table of Contents
+1. `onCreate(savedInnumncenumte: Bundle?)`: Called when the activity is first created, initializes the game board, sets
+   up UI components, and assigns click listeners to buttons.
 
-- [Overview](#overview)
-- [Assignments](#assignments)
-- [Exams](#exams)
-- [Slides](#slides)
-- [Notes](#notes)
-- [Source](#source)
-- [Maintainer](#maintainer)
+2. `play()`: Assigns click listeners to each button on the game board.
 
-## Assignments
+3. `checkTurn(btn: Button)`: Checks whose turn it is (X or O) and updates the game board accordingly when a button is
+   clicked.
 
-In the "Assignments" folder, you will find the solutions to assignments given during the course.
+4. `case(btn: Button)`: Updates the internal game state based on which button is clicked.
 
-## Exams
+5. `toggleTurn(trn: Int)`: Switches the turn between X and O after a move is made.
 
-In the "Exams" folder, you will find the solutions to the midterm and final of the course.
+6. `checkEndGame(turnNumber: Int)`: Checks if there is a winner or if the game is a draw after each move.
 
-## Slides
+7. `selectWinner(winnerId: Int)`: Handles actions when a player wins the game.
 
-In the "Slides" folder, you will find the course slides.
+8. `disableButtons(buttons: Array<Button>)`: Disables buttons on the game board.
 
-## Notes
+9. `enableButtons(buttons: Array<Button>)`: Enables buttons on the game board.
 
-In the "Notes" folder, you will find the course notes.
+10. `updateScore()`: Updates displayed scores for each player.
 
-## Source
+11. `setColorWinner(b1: Button, b2: Button, b3: Button)`: Changes text color of the winning combination to indicate the
+    winning sequence.
 
-In the "Source" folder, you will find the source of the course.
+12. `dialogWinner(win: String)`: Displays a dialog box announcing the winner of the game.
 
-## Maintainer
+13. `resetGame()`: Resets the game board and toggles the turn back to Player X.
 
-- [Moeein Aali](https://github.com/moeeinaali)
+14. `clearGame()`: Resets the internal game state.
 
+15. `clearButtons()`: Clears text of all buttons on the game board.
+
+### Variables
+
+1. `binding`: An instance of the `ActivityMainBinding` class representing the binding between the activity and its
+   layout.
+
+2. `game`: A 2D array representing the state of the Tic Tac Toe game board.
+
+3. `buttons`: An array containing references to all buttons on the game board.
+
+4. `scoreX`: An integer representing the score of Player X.
+
+5. `scoreO`: An integer representing the score of Player O.
+
+6. `turn`: An integer representing whose turn it is (1 for X, 2 for O).
+
+## Codes ~ Kotlin & XML
+
+- [Kotlin Codes](TicTacToe\app\src\main\java\com\Moeein\tictactoe\MainActivity.kt)
+- [XML Codes](TicTacToe\app\src\main\res\layout\activity_main.xml)
