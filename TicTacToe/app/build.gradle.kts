@@ -6,10 +6,9 @@ plugins {
 android {
     namespace = "com.Moeein.tictactoe"
     compileSdk = 34
-    buildFeatures {
-        viewBinding = true
+    viewBinding {
+        enable = true
     }
-
     defaultConfig {
         applicationId = "com.Moeein.tictactoe"
         minSdk = 30
